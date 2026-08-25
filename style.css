@@ -1,0 +1,406 @@
+
+/* =========================================================
+   Color Theme
+   ========================================================= */
+
+:root {
+    --bg-main: #0A0E17;
+    --bg-card: #161F33;
+
+    --accent-primary: #00F0FF;
+    --accent-secondary: #FF0055;
+
+    --text-main: #E0E6ED;
+    --text-muted: #94A3B8;
+}
+
+
+/* =========================================================
+   Global Styles
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+
+/* =========================================================
+   Hero Section
+   ========================================================= */
+
+.hero {
+    max-width: 900px;
+    margin: 120px auto;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    color: var(--accent-primary);
+    font-size: 4rem;
+    margin: 0 0 10px;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin: 0 0 25px;
+    color: var(--text-main);
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+    max-width: 800px;
+    margin: 0 0 50px;
+}
+
+
+/* =========================================================
+   Resume Button
+   ========================================================= */
+
+.btn {
+    background-color: var(--accent-primary);
+    color: var(--bg-main);
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #DDE7F0;
+    color: var(--bg-main);
+    text-decoration: none;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 12px rgba(0, 240, 255, 0.25),
+        0 0 24px rgba(0, 240, 255, 0.10);
+}
+
+
+/* =========================================================
+   Experience Section
+   ========================================================= */
+
+.experience {
+    max-width: 1000px;
+    margin: 160px auto;
+    padding: 0 24px;
+}
+
+.section-title {
+    color: var(--text-main);
+    font-size: 2.5rem;
+    margin: 0 0 10px;
+}
+
+.section-subtitle {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin: 0 0 70px;
+}
+
+.company-link {
+    color: #7DD3FC;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.company-link:hover {
+    color: var(--accent-primary);
+}
+
+/* =========================================================
+   Timeline
+   ========================================================= */
+
+.timeline {
+    position: relative;
+    margin-left: 10px;
+}
+
+
+/* Vertical timeline line */
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 7px;
+    top: 8px;
+    bottom: 0;
+
+    width: 2px;
+
+    background-color: var(--bg-card);
+}
+
+
+/* Individual timeline item */
+
+.timeline-item {
+    position: relative;
+
+    padding-left: 45px;
+    padding-bottom: 70px;
+}
+
+
+/* Cyan timeline dot */
+
+.timeline-dot {
+    position: absolute;
+
+    left: 0;
+    top: 7px;
+
+    width: 16px;
+    height: 16px;
+
+    background-color: var(--accent-primary);
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 8px rgba(0, 240, 255, 0.45),
+        0 0 16px rgba(0, 240, 255, 0.20);
+}
+
+
+/* Timeline content */
+
+.timeline-content {
+    max-width: 800px;
+}
+
+
+/* Job title + date */
+
+.timeline-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* Job title */
+
+.timeline-content h3 {
+    color: var(--text-main);
+
+    font-size: 1.5rem;
+
+    margin: 0;
+}
+
+
+/* Company */
+
+.timeline-content h4 {
+    color: var(--accent-primary);
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    margin: 8px 0 25px;
+}
+
+
+/* Date */
+
+.timeline-date {
+    color: var(--text-muted);
+
+    font-size: 0.9rem;
+
+    white-space: nowrap;
+}
+
+
+/* Experience description */
+
+.timeline-content p {
+    color: var(--text-muted);
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+
+    margin: 0 0 18px;
+}
+
+
+/* =========================================================
+   View More Button
+   ========================================================= */
+
+.view-more {
+    background: transparent;
+
+    border: none;
+
+    color: var(--accent-primary);
+
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    padding: 5px 0;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.view-more:hover {
+    color: var(--text-main);
+
+    transform: translateX(4px);
+}
+
+
+/* Hide additional experience points */
+
+.experience-details p:nth-child(n + 4) {
+    display: none;
+}
+
+
+/* Show all experience points when expanded */
+
+.experience-details.expanded p {
+    display: block;
+}
+
+
+/* =========================================================
+   Responsive Design - Tablet
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        margin: 90px auto;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero h2 {
+        font-size: 1.7rem;
+    }
+
+    .hero-description {
+        font-size: 1.1rem;
+    }
+
+    .experience {
+        margin: 120px auto;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .timeline-header {
+        display: block;
+    }
+
+    .timeline-date {
+        display: block;
+
+        margin-top: 8px;
+    }
+}
+
+
+/* =========================================================
+   Responsive Design - Mobile
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .hero {
+        margin: 70px auto;
+        padding: 0 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 40px;
+    }
+
+    .btn {
+        padding: 12px 22px;
+    }
+
+    .experience {
+        margin: 90px auto;
+        padding: 0 20px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 50px;
+    }
+
+    .timeline {
+        margin-left: 5px;
+    }
+
+    .timeline-item {
+        padding-left: 35px;
+        padding-bottom: 55px;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.95rem;
+        line-height: 1.65;
+    }
+
+    .timeline-dot {
+        width: 13px;
+        height: 13px;
+    }
+
+    .timeline::before {
+        left: 5px;
+    }
+}
