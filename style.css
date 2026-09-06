@@ -126,6 +126,26 @@ body {
     color: var(--accent-primary);
 }
 
+.college-link {
+    color: #7DD3FC;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.college-link:hover {
+    color: var(--accent-primary);
+}
+
+.institution-link {
+    color: #7DD3FC;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.institution-link:hover {
+    color: var(--accent-primary);
+}
+
 /* =========================================================
    Timeline
    ========================================================= */
@@ -145,9 +165,10 @@ body {
 
     left: 7px;
     top: 8px;
-    bottom: 0;
 
     width: 2px;
+
+    height: calc(100% - 78px);
 
     background-color: var(--bg-card);
 }
